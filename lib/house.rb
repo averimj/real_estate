@@ -10,6 +10,14 @@ class House
   end
 
   def add_room(room)
-    @rooms << room 
+    @rooms << room
   end
+
+  def rooms_from_category(symbol)
+     @rooms.find_all do |room|
+       room.category == symbol
+     end
+  end
+
+
 end
